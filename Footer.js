@@ -7,15 +7,15 @@ const Footer = () => {
         <div className="footer">
         <div className="iconContainer">
         
-        <a href="https://www.instagram.com/" target="__blanc" >
+        <a href="https://www.instagram.com/" target="__blank" >
           <i className="fab fa-instagram-square fa-2x"></i>
         </a>
 
-        <a href="https://www.twitter.com/" target="__blanc" >
+        <a href="https://www.twitter.com/" target="__blank" >
           <i className="fab fa-twitter fa-2x"></i>
         </a>
 
-        <a href="https://www.linkedin.com/" target="__blanc" >
+        <a href="https://www.linkedin.com/" target="__blank" >
           <i className="fab fa-linkedin fa-2x"></i>
         </a>
         
