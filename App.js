@@ -10,7 +10,8 @@ function App() {
   //const [category,setCategory]= useState("covid");
   const [newsArray,setNewsArray]=useState([]);
   const [newsResults,setNewsResults]=useState();
-  const [loadMore,setLoadMore]=useState(20);
+  const [loadMore, setLoadMore] = useState(20);
+  
 
   const newsApi=async () => {
     try {
@@ -19,6 +20,7 @@ function App() {
       );
       setNewsArray(news.data.articles);
        setNewsResults(news.data.totalResults);
+       
       
 
     } catch(error){
@@ -32,7 +34,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App" id="#home">
      
      {newsResults && (
         <NewsContent
@@ -40,8 +42,10 @@ function App() {
           newsResults={newsResults}
           loadMore={loadMore}
           setLoadMore={setLoadMore}
+          
         />
       )}
+      
      <Footer />
     </div>
   );
