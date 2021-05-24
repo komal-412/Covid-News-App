@@ -1,7 +1,7 @@
 import "./App.css";
 import { useEffect, useState } from "react"; 
 import NewsContent from './components/NewsContent/NewsContent';
-//import apikey from "./data/apikey";
+import apikey from "./apikey";
 import axios from "axios";
 import Footer from "./components/Footer/Footer"
 //import categories from "./data/category";
@@ -16,7 +16,7 @@ function App() {
   const newsApi=async () => {
     try {
         
-      const news = await axios.get(`https://newsapi.org/v2/top-headlines?q=covid&country=in&apiKey=24a39dc59a3b45bc8ad1e2cafdcb27e5`
+      const news = await axios.get(`https://newsapi.org/v2/top-headlines?q=covid&country=in&apiKey=${apikey}`
       );
       setNewsArray(news.data.articles);
        setNewsResults(news.data.totalResults);
